@@ -1,0 +1,326 @@
+:root {
+    --ss-primary-color: #5897fb;
+    --ss-bg-color: #0000;
+    --ss-font-color: #fff;
+    --ss-font-placeholder-color: #ffffff80;
+    --ss-disabled-color: #8a8a8a;
+    --ss-border-color: #ffffff29;
+    --ss-highlight-color: #fffb8c;
+    --ss-error-color: red;
+    --ss-main-height: 50px;
+    --ss-content-height: 300px;
+    --ss-spacing-l: 24px;
+    --ss-spacing-m: 8px;
+    --ss-spacing-s: 3px;
+    --ss-animation-timing: 0.3s;
+    --ss-border-radius: 0px;
+  }
+@font-face {
+    font-family: FranieL;
+    src: url(./fonts/Franie-Light.woff2);
+}
+@font-face {
+    font-family: FranieR;
+    src: url(./fonts/Franie-Regular.woff2);
+}
+@font-face {
+    font-family: FranieSL;
+    src: url(./fonts/Franie-SemiLight.woff2);
+}
+@font-face {
+    font-family: NunitoSansL;
+    src: url(./fonts/NunitoSans_10pt-Light.ttf);
+}
+@font-face {
+    font-family: NunitoSansR;
+    src: url(./fonts/NunitoSans_10pt-Regular.ttf);
+}
+@font-face {
+    font-family: NunitoSansSB;
+    src: url(./fonts/NunitoSans_10pt-SemiBold.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+#main {
+    position: relative;
+    overflow: hidden;
+}
+#page {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+#page1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+#page2 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+#page3 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+}
+canvas {
+    position: relative;
+    z-index: -1;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+#loop {
+    display: flex;
+    position: absolute;
+    top: 30%;
+    height: 25%;
+    width: 100%;
+    font-size: 100px;
+    white-space: nowrap;
+    font-family: Gilroy;
+}
+#loop>h1 {
+    font-weight: 400;
+    color: #fff;
+    animation-name: loops;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+#loop>h1>span {
+    -webkit-text-stroke: 1.2px #ffffff;
+    color: transparent;
+    font-weight: 500;
+}
+
+
+@keyframes loops {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+#page>h3 {
+    position: absolute;
+    top: 55%;
+    font-family: Gilroy;
+    font-weight: 400;
+    color: #ffffff;
+    left: 5%;
+    line-height: 30px;
+}
+
+#page>h4 {
+    position: absolute;
+    top: 65%;
+    font-family: Gilroy;
+    font-weight: 700;
+    color: #000;
+    left: 30%;
+    line-height: 30px;
+}
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    padding: 0px 30px;
+    padding-top: 40px;
+}
+#nav>h3 {
+    font-family: Gilroy;
+    font-weight: 400;
+    font-size: 22px;
+}
+#nav>button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: transparent;  
+    color: #fff;
+    border: none;
+}
+#nav>button>i {
+    font-size: 32px;
+}
+
+
+
+
+
+
+
+/* CANS MAIN */
+.text {
+    width: 100%;
+}
+.text h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    letter-spacing: 2.7em;
+    font-family: FranieR;
+    font-size: clamp(64px,32px + 2.5vw,80px);
+    font-weight: 200;
+    letter-spacing: var(--letter-spacing);
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 1s cubic-bezier(.25,.25,0,1);
+    margin-bottom: 50px;
+}
+
+.hero-description {
+    font-family: FranieL;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: .26em;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 1s cubic-bezier(.25,.25,0,1);
+}
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    transition: transform 1s cubic-bezier(.25,.25,0,1);
+}
+.btn-white {
+    --color-default: #000;
+    --color-hover: #fff;
+    --bg-color-default: #fff;
+    --circle-bg-color-default: #283fff;
+    --circle-bg-color-active: #4256ff
+}
+
+
+.btn, .text-button {
+    font-family: FranieR;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    text-decoration: none;
+    color: #000000;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 50px;
+
+}
+.btn-blue {
+    font-family: FranieR;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    background: #283fff;
+    border-radius: 10px;
+    margin-top: 50px;
+
+}
+
+button {
+    background-color: #0000;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+    text-transform: inherit;
+}
+
+
+/*  Page 1 */
+
+#page1 {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+#page2 {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+#page3 {
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+   
+}
+
+
+.text-wrap {
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.text-wrap h3 {
+    font-family: FranieL;
+    font-size: clamp(24px,-8px + 2.5vw,40px);
+    font-weight: 400;
+    letter-spacing: .02em;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.text-wrap p {
+    font-family: NunitoSansL;
+    font-size:  clamp(16px,6px + .78125vw,21px);
+}
+
+.text-wrap button {
+    font-family: FranieL;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    padding: 17px 40px;
+    background: #cccccc3d;
+    border-radius: 0.4rem;
+    margin-top: 15px;
+}
