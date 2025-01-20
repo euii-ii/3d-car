@@ -37,7 +37,6 @@ A visually stunning and interactive 3D car website built using HTML, CSS, and Ja
 - **HTML5:** For structuring the website.
 - **CSS3:** For styling and animations.
 - **JavaScript:** For interactivity and dynamic content.
-- **Three.js:** For 3D rendering and interactions.
 
 ---
 
